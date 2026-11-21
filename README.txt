@@ -39,5 +39,4 @@ PURPOSE
 The purpose of this portfolio is to present my skills, knowledge, academic accomplishments, and completed projects in one accessible platform. It also serves as a digital record of my growth and development as a future Computer Engineer.
 
 CREATED BY: Liezl Caballero
-
 PROGRAM: Bachelor of Science in Computer Engineering
