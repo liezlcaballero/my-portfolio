@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Liezl G. Caballero — Computer Engineering student. Arduino and IoT projects, certificates, and video edits.">
+<meta name="theme-color" content="#7d2438">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Liezl G. Caballero | Creative Portfolio">
+<meta property="og:description" content="Computer Engineering student with hands-on Arduino and IoT projects, certificates, and a creative side in photo and video editing.">
+<title>Liezl G. Caballero | Creative Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%237d2438'%3E✿%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Liezl G. Caballero","jobTitle":"Computer Engineering Student","affiliation":{"@type":"CollegeOrUniversity","name":"STI College Rosario"},"knowsAbout":["Arduino","IoT","System Automation","Solid Edge","Video Editing"]}</script>
+<style>
+:root{--wine:#7d2438;--berry:#a63d55;--paper:#fffaf1;--ink:#4b3033;--muted:#6f5755;--line:#e7c9c4;--shadow:0 14px 35px rgba(95,40,49,.13)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Georgia,serif;line-height:1.65;background-color:#fbf2ed}
+/* Whimsical but minimal backdrop: soft pastel glows and a few scattered sparkles (fixed behind everything) */
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background-image:
+radial-gradient(circle at 8% 12%,rgba(244,184,198,.34),transparent 34%),
+radial-gradient(circle at 92% 20%,rgba(252,226,180,.34),transparent 32%),
+radial-gradient(circle at 78% 92%,rgba(214,190,230,.28),transparent 36%),
+url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420' viewBox='0 0 420 420'%3E%3Cpath transform='translate(70 80)' d='M0-9L2.2-2.2L9 0L2.2 2.2L0 9L-2.2 2.2L-9 0L-2.2-2.2Z' fill='%23f0c978' opacity='.7'/%3E%3Cpath transform='translate(330 235) scale(.7)' d='M0-9L2.2-2.2L9 0L2.2 2.2L0 9L-2.2 2.2L-9 0L-2.2-2.2Z' fill='%23c9a4d6' opacity='.6'/%3E%3Cg transform='translate(235 345) scale(.55)'%3E%3Cg fill='%23efb4bf' opacity='.65'%3E%3Ccircle cx='0' cy='-10' r='7'/%3E%3Ccircle cx='9.5' cy='-3.1' r='7'/%3E%3Ccircle cx='5.9' cy='8.1' r='7'/%3E%3Ccircle cx='-5.9' cy='8.1' r='7'/%3E%3Ccircle cx='-9.5' cy='-3.1' r='7'/%3E%3C/g%3E%3Ccircle r='4' fill='%23f4d58a' opacity='.9'/%3E%3C/g%3E%3Ccircle cx='255' cy='60' r='2' fill='%23e9b4a8' opacity='.7'/%3E%3Ccircle cx='125' cy='300' r='2' fill='%23f0c978' opacity='.7'/%3E%3Ccircle cx='370' cy='110' r='1.6' fill='%23e8a0ae' opacity='.6'/%3E%3C/svg%3E");
+background-size:auto,auto,auto,420px 420px}
+body:has(dialog[open]){overflow:hidden}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--berry);outline-offset:3px}
+.wrap{width:min(1120px,calc(100% - 38px));margin:auto}
+.skip{position:absolute;left:12px;top:-70px;z-index:100;background:var(--wine);color:#fff8ef;padding:10px 16px;font:700 .86rem Arial,sans-serif;transition:top .2s}
+.skip:focus{top:10px}
+header[id],section[id]{scroll-margin-top:70px}
+
+/* Navigation */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,250,241,.94);backdrop-filter:blur(12px);border-bottom:3px double #d9aeb0}
+.navinner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:bold;letter-spacing:.08em;color:var(--wine)}
+.brand span{color:var(--berry)}
+.navlinks{display:flex;gap:21px;color:#6b4a4e;font:.9rem Arial,sans-serif}
+.navlinks a{padding:4px 0;border-bottom:2px solid transparent}
+.navlinks a:hover,.navlinks a[aria-current="true"]{color:var(--berry);border-bottom-color:var(--berry)}
+.menu{display:none;padding:8px 14px;border:1px solid #c88e96;background:#fffaf4;color:var(--wine);font:700 .85rem Arial,sans-serif;cursor:pointer}
+
+/* Hero */
+.hero{padding:68px 0 76px;display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;min-height:620px}
+.eyebrow{color:var(--berry);font:800 .74rem Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.hero h1{font-size:clamp(3rem,6.6vw,5.8rem);font-weight:500;line-height:.92;margin:17px 0 22px;color:var(--wine)}
+.hero h1 em{font-style:italic;color:#b65e70}
+.lead{color:var(--muted);font-size:1.08rem}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:6px 14px;border:1px solid #e8c9c2;border-radius:99px;background:#f8e9e5;color:var(--wine);font:700 .78rem Arial,sans-serif}
+.status:before{content:"";width:8px;height:8px;border-radius:50%;background:#4f9a6a}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{display:inline-flex;padding:11px 18px;font:700 .86rem Arial,sans-serif;border:1px solid #c88e96;background:#fffaf4;color:var(--wine);box-shadow:3px 4px 0 #e6c7c0;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 5px 0 #e6c7c0}
+.btn.primary{background:var(--wine);color:#fff8ef}
+.note{font:.78rem Arial,sans-serif;color:#775f5b;margin-top:14px}
+.hero-collage{position:relative;min-height:455px;padding:28px;background:#ead4c7;border:9px solid #fffaf1;outline:1px solid #d9b9b2;box-shadow:var(--shadow);transform:rotate(1deg);background-image:repeating-linear-gradient(45deg,rgba(132,37,56,.08) 0 12px,transparent 12px 24px),repeating-linear-gradient(-45deg,rgba(132,37,56,.05) 0 12px,transparent 12px 24px)}
+.hero-collage:before,.hero-collage:after{content:"";position:absolute;left:-9px;right:-9px;height:17px;background:repeating-linear-gradient(90deg,#9c4554 0 3px,#f9e9df 3px 7px)}
+.hero-collage:before{top:-9px}
+.hero-collage:after{bottom:-9px}
+.photo-frame{position:absolute;left:12%;top:9%;width:68%;height:78%;padding:12px 12px 50px;background:#fffdf8;box-shadow:0 8px 20px rgba(80,35,40,.2);transform:rotate(-3deg);border:1px solid #e6d7c9}
+.photo-inner{position:relative;width:100%;height:100%}
+.photo-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f4e0dc,#ead9cf);color:#b85f6c;font-size:3rem}
+.photo-caption{position:absolute;bottom:7px;left:0;right:0;text-align:center;font:italic .8rem/1.25 Georgia,serif;color:#81525a;padding:0 6px}
+.tape{position:absolute;z-index:3;top:3%;left:39%;width:92px;height:25px;background:rgba(193,135,125,.55);transform:rotate(-8deg)}
+.flower{position:absolute;z-index:4;font-size:2.5rem;color:var(--wine);text-shadow:1px 2px #fff}
+.fl1{right:4%;top:7%}
+.fl2{left:2%;bottom:5%;color:#b85f6c}
+.sticker{position:absolute;right:3%;bottom:8%;z-index:5;background:var(--wine);color:#fff7ee;border:5px solid #fffaf1;outline:1px solid var(--wine);border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;font:italic 1rem Georgia,serif}
+
+/* Sections */
+section{padding:72px 0;border-top:3px double #dcb9b4}
+.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}
+.sectionhead h2{font-size:clamp(2rem,4vw,3rem);font-weight:500;margin:8px 0;color:var(--wine)}
+.sectionhead p{color:var(--muted);max-width:470px}
+.grid{display:grid;gap:18px}
+.card{background:var(--paper);border:1px solid #dfc1b9;outline:4px solid rgba(255,250,241,.75);box-shadow:var(--shadow);padding:24px;position:relative}
+.card:before{content:"";position:absolute;inset:7px;border:1px dashed #e3c8c0;pointer-events:none}
+.card>*{position:relative}
+.card h3{color:var(--wine)}
+.card p{color:var(--muted)}
+.aboutgrid{grid-template-columns:1.2fr .8fr}
+.factgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{padding:16px;background:#f8e9e5;border:1px solid #e8c9c2;text-align:center}
+.fact b{display:block;color:var(--wine);font-size:1.5rem}
+.fact span{color:var(--muted);font:.78rem Arial,sans-serif}
+
+/* Skills */
+.skillgrid{grid-template-columns:repeat(3,1fr)}
+.skill h3{margin:0 0 12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font:.78rem Arial,sans-serif;color:#6a4349;border:1px solid #e2c5be;background:#fff7f1;padding:6px 10px}
+
+/* Projects */
+.projects{grid-template-columns:repeat(2,1fr)}
+.project{padding:0;overflow:hidden}
+.projectvisual{height:240px;position:relative;display:grid;place-items:center;background:#f0ded6;border-bottom:1px solid var(--line);overflow:hidden;padding:12px}
+.project-carousel{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;grid-template-rows:minmax(0,1fr) 20px;align-items:center;gap:4px;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;overflow:hidden;touch-action:pan-y}
+.project-carousel.single{grid-template-columns:0 minmax(0,1fr) 0}
+.project-carousel.single .carousel-btn,.project-carousel.single .carousel-dots{display:none}
+.project-slide{display:none;grid-column:2;grid-row:1;width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;background:#fffaf1;border:7px solid #fffaf1}
+.project-slide.active{display:block}
+.carousel-btn{position:relative;z-index:10;display:grid;place-items:center;width:40px;height:40px;justify-self:center;border:2px solid #fffaf1;border-radius:50%;background:#7d2438;color:#fffaf1;font:bold 1.3rem Arial,sans-serif;box-shadow:0 2px 8px rgba(40,20,25,.45);cursor:pointer}
+.carousel-btn.prev{grid-column:1;grid-row:1}
+.carousel-btn.next{grid-column:3;grid-row:1}
+.carousel-dots{grid-column:1/-1;grid-row:2;display:flex;justify-content:center;gap:6px}
+.carousel-dot{width:10px;height:10px;border:1px solid #fffaf1;border-radius:50%;background:#7d2438;padding:0;cursor:pointer}
+.carousel-dot.active{background:#fffaf1;border-color:#7d2438}
+.uploadhint{text-align:center;padding:20px;color:#7a5359;font:.85rem Arial,sans-serif}
+.uploadhint .symbol{font-size:2.3rem;color:#a64b5b;display:block}
+.projectbody{padding:22px}
+.projectbody h3{font-size:1.15rem;margin:0}
+.meta{color:var(--berry);font:700 .76rem Arial,sans-serif;margin-top:5px}
+.projectbody p,.projectbody ul{color:var(--muted);font-size:.9rem}
+.projectbody ul{padding-left:19px}
+.projectbody .award{display:inline-block;margin:4px 0 0;padding:6px 12px;background:#f8e9e5;border:1px solid #e8c9c2;color:var(--wine);font:700 .8rem Arial,sans-serif}
+
+/* Certificates */
+.groupheading{margin:26px 0 14px;font-size:1.25rem;font-weight:500;color:var(--wine)}
+.certgrid{grid-template-columns:repeat(2,1fr)}
+.cert{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px;background:#fffaf3;border:1px solid #e4c9c1;box-shadow:3px 4px 0 #ead5cc}
+.cert h4{font-size:1rem;margin:0}
+.cert p{font:.8rem Arial,sans-serif;color:var(--muted);margin:4px 0 0}
+.certactions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;flex-shrink:0}
+.linkbtn{padding:8px 12px;background:#f2dfe0;color:var(--wine);font:800 .78rem Arial,sans-serif;border:1px solid #dcb5b6;white-space:nowrap}
+.linkbtn:hover{background:#ecd0d2}
+.linkbtn.ghost{background:transparent}
+.certificate-dialog{width:min(1000px,calc(100% - 28px));height:min(90vh,850px);padding:0;border:1px solid #dcb9b2;background:var(--paper);box-shadow:0 20px 60px rgba(40,20,25,.35)}
+.certificate-dialog[open]{display:flex;flex-direction:column}
+.certificate-dialog::backdrop{background:rgba(35,20,25,.72)}
+.certificate-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px;border-bottom:1px solid var(--line);font:700 1rem Arial,sans-serif;color:var(--wine)}
+.certificate-dialog-actions{display:flex;gap:8px;flex-shrink:0}
+.certificate-close{border:1px solid #dcb5b6;background:#f2dfe0;color:var(--wine);padding:8px 12px;font:800 .78rem Arial,sans-serif;cursor:pointer}
+.certificate-frame{display:block;flex:1;min-height:0;width:100%;border:0;background:#eee}
+
+/* Video */
+.videogrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.video-card{padding:0;overflow:hidden}
+.video-frame{aspect-ratio:16/10;background:#f0dfd8;display:grid;place-items:center;position:relative}
+.video-frame video{width:100%;height:100%;object-fit:contain;background:#21191b}
+.video-frame iframe{width:100%;height:100%;border:0;background:#21191b}
+.video-info{padding:18px}
+.video-info .linkbtn{display:inline-block;margin-top:12px}
+.video-info h3{font-size:1.05rem;margin:0}
+.video-info p{font-size:.9rem;margin:8px 0 0}
+
+/* Education */
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.item{border-left:2px solid #bd7580;padding:2px 0 3px 17px;margin:0 0 18px}
+.item h4{font-size:1rem;margin:0;color:var(--ink)}
+.when{color:var(--berry);font:800 .75rem Arial,sans-serif}
+.item p{color:var(--muted);font-size:.88rem;margin:2px 0 0}
+
+/* Contact + footer */
+.contactbox{display:flex;align-items:center;justify-content:space-between;gap:28px;background:#f4e2dd;border:1px solid #dcb9b2;outline:5px solid #fffaf1;box-shadow:var(--shadow);padding:32px}
+.contactbox h2{font-size:2.2rem;color:var(--wine);margin:8px 0}
+.contactbox p{color:var(--muted)}
+.contactlinks{display:grid;gap:10px;min-width:260px}
+.contactlinks a{padding:10px 13px;background:#fffaf3;border:1px solid #e2c6bf;font:.86rem Arial,sans-serif;overflow-wrap:anywhere}
+.contactlinks a:hover{border-color:var(--berry);color:var(--berry)}
+footer{padding:28px 0;color:#7a6460;font:.8rem Arial,sans-serif}
+.footerinner{display:flex;justify-content:space-between;gap:20px}
+
+/* Scroll reveal (only when JS is running) */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;padding:55px 0}
+  .hero-collage{min-height:390px}
+  .aboutgrid,.skillgrid,.timeline,.certgrid,.projects,.videogrid{grid-template-columns:1fr}
+  .sectionhead{display:block}
+  .contactbox{display:block}
+  .contactlinks{margin-top:20px;min-width:0}
+  .navlinks{display:none;position:absolute;top:70px;left:0;right:0;padding:12px 20px 20px;background:var(--paper);flex-direction:column;gap:6px;border-bottom:3px double #d9aeb0;box-shadow:0 12px 20px rgba(60,25,30,.12)}
+  .navlinks a{padding:8px 0}
+  .navlinks.open{display:flex}
+  .menu{display:block}
+}
+@media(max-width:520px){
+  .hero-collage{min-height:340px}
+  .photo-frame{width:75%;left:10%}
+  .photo-caption{font-size:.72rem}
+  .cert{flex-wrap:wrap}
+  .certactions{justify-content:flex-start}
+  .footerinner{flex-direction:column;gap:6px}
+  .certificate-dialog-head{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+@media print{
+  nav,.skip,.carousel-btn,.carousel-dots,.menu{display:none!important}
+  body{background:#fff}
+  body:before{display:none}
+  .card,.cert,.contactbox{box-shadow:none}
+  .js .reveal{opacity:1!important;transform:none!important}
+  section{padding:28px 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+<nav aria-label="Main">
+  <div class="wrap navinner">
+    <a class="brand" href="#home">LIEZL CABALLERO <span>✿</span></a>
+    <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#creative">Video edits</a>
+      <a href="#credentials">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<header class="wrap hero" id="home">
+  <div>
+    <div class="eyebrow">✿ Computer Engineering student · Personal portfolio</div>
+    <h1>Hello,<br>I'm <em>Liezl.</em></h1>
+    <p class="lead">A curious Computer Engineering student with a love for hands-on technology, creative projects, and learning how ideas can become something real.</p>
+    <span class="status">Open to entry-level technical &amp; engineering roles</span>
+    <div class="actions">
+      <a class="btn primary" href="#projects">Explore my work ↗</a>
+      <a class="btn" href="#about">A little about me</a>
+    </div>
+    <p class="note">BS Computer Engineering · STI College Rosario · Expected Graduation 2027</p>
+  </div>
+  <div class="hero-collage">
+    <div class="tape"></div>
+    <div class="photo-frame">
+      <div class="photo-inner">
+        <div class="photo-placeholder" aria-hidden="true">✿</div>
+        <img src="images/liezl-portrait.jpg" alt="Portrait of Liezl G. Caballero" onerror="this.remove()">
+      </div>
+      <div class="photo-caption">Creating Today,<br>Innovating Tomorrow.</div>
+    </div>
+    <span class="flower fl1" aria-hidden="true">✿</span>
+    <span class="flower fl2" aria-hidden="true">❀</span>
+    <div class="sticker" aria-hidden="true">CPE<br>2027</div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sectionhead">
+      <div><div class="eyebrow">01 / A little introduction</div><h2>More than a major.</h2></div>
+      <p>A mix of technical curiosity, practical learning, and creative interests.</p>
+    </div>
+    <div class="grid aboutgrid">
+      <article class="card">
+        <h3>About me</h3>
+        <p>I am currently pursuing a Bachelor of Science in Computer Engineering at STI College Rosario. Through academic projects, I have gained practical experience in basic electrical wiring, circuit connections, hardware assembly, component integration, and system automation.</p>
+        <p>I have also worked with Arduino-based systems, sensors, authentication methods, water-level monitoring, and hardware-software integration. Outside my engineering projects, I enjoy creative work such as photo and video editing. I am eager to keep learning and bring both my technical and creative skills into a professional environment.</p>
+      </article>
+      <div class="card">
+        <div class="factgrid">
+          <div class="fact"><b>2027</b><span>Expected graduation</span></div>
+          <div class="fact"><b>4</b><span>Academic projects</span></div>
+          <div class="fact"><b>11</b><span>Certificates &amp; trainings</span></div>
+          <div class="fact"><b>★ 1</b><span>Project award</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sectionhead">
+      <div><div class="eyebrow">02 / Things I work with</div><h2>My skill set</h2></div>
+      <p>Tools and skills developed through coursework, technical training, and project experience.</p>
+    </div>
+    <div class="grid skillgrid">
+      <div class="card skill"><h3>Hardware &amp; electronics</h3><div class="tags"><span class="tag">Basic Electrical Wiring</span><span class="tag">Circuit Connections</span><span class="tag">Hardware Assembly</span><span class="tag">Component Integration</span><span class="tag">Basic Electronics</span><span class="tag">Soldering</span></div></div>
+      <div class="card skill"><h3>Automation &amp; systems</h3><div class="tags"><span class="tag">System Automation</span><span class="tag">IoT Concepts</span><span class="tag">Hardware / Software Integration</span><span class="tag">Arduino</span></div></div>
+      <div class="card skill"><h3>CAD, programming &amp; database</h3><div class="tags"><span class="tag">Solid Edge</span><span class="tag">Python · Basic</span><span class="tag">Java · Basic</span><span class="tag">C++ · Basic</span><span class="tag">MATLAB</span><span class="tag">MySQL</span><span class="tag">MIT App Inventor</span></div></div>
+      <div class="card skill"><h3>Creative tools</h3><div class="tags"><span class="tag">Adobe Lightroom</span><span class="tag">Snapseed</span><span class="tag">Picsart</span><span class="tag">CapCut</span></div></div>
+      <div class="card skill"><h3>Productivity &amp; design</h3><div class="tags"><span class="tag">Microsoft Word</span><span class="tag">Excel</span><span class="tag">PowerPoint</span><span class="tag">Canva</span></div></div>
+      <div class="card skill"><h3>How I work</h3><div class="tags"><span class="tag">Problem-Solving</span><span class="tag">Critical Thinking</span><span class="tag">Attention to Detail</span><span class="tag">Adaptability</span><span class="tag">Teamwork</span><span class="tag">Creativity</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sectionhead">
+      <div><div class="eyebrow">03 / Built &amp; learned</div><h2>My projects</h2></div>
+      <p>A few academic projects where I got to turn concepts into working systems.</p>
+    </div>
+    <div class="grid projects">
+
+      <article class="card project">
+        <div class="projectvisual"><div class="project-carousel">
+          <img class="project-slide active" src="images/motor-box-1.jpg" alt="Smart secure motor box project, photo 1" loading="lazy" decoding="async">
+          <img class="project-slide" src="images/motor-box-2.jpg" alt="Smart secure motor box project, photo 2" loading="lazy" decoding="async">
+          <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+          <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+          <div class="carousel-dots"></div>
+        </div></div>
+        <div class="projectbody">
+          <h3>Smart Secure Motor Box with Fingerprint Lock and Alarm</h3>
+          <div class="meta">STI College Rosario · SY 2024–2025</div>
+          <p>An Arduino-based motor security system focused on user authentication and access alerts.</p>
+          <ul><li>Used fingerprint and RFID authentication.</li><li>Integrated LED indicators and an alarm system for access status and security alerts.</li></ul>
+          <p class="award">★ Best in Software Design Project, SY 2024–2025</p>
+        </div>
+      </article>
+
+      <article class="card project">
+        <div class="projectvisual"><div class="project-carousel">
+          <img class="project-slide active" src="images/smart-locker-1.jpg" alt="Smart locker project, photo 1" loading="lazy" decoding="async">
+          <img class="project-slide" src="images/smart-locker-2.jpg" alt="Smart locker project, photo 2" loading="lazy" decoding="async">
+          <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+          <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+          <div class="carousel-dots"></div>
+        </div></div>
+        <div class="projectbody">
+          <h3>Smart Locker System</h3>
+          <div class="meta">STI College Rosario · SY 2025–2026</div>
+          <p>An Arduino-based smart locker combining multiple access and sensing components.</p>
+          <ul><li>Used RFID and fingerprint authentication.</li><li>Included keypad access and infrared sensing.</li><li>Integrated components for secure access and automated locker operation.</li></ul>
+        </div>
+      </article>
+
+      <article class="card project">
+        <div class="projectvisual"><div class="project-carousel">
+          <img class="project-slide active" src="images/water-tank-1.jpg" alt="Automated water tank project, photo 1" loading="lazy" decoding="async">
+          <img class="project-slide" src="images/water-tank-2.jpg" alt="Automated water tank project, photo 2" loading="lazy" decoding="async">
+          <img class="project-slide" src="images/water-tank-3.jpg" alt="Automated water tank project, photo 3" loading="lazy" decoding="async">
+          <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+          <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+          <div class="carousel-dots"></div>
+        </div></div>
+        <div class="projectbody">
+          <h3>Miniature Automated Water Tank System</h3>
+          <div class="meta">STI College Rosario · SY 2025–2026 · Individual Project</div>
+          <p>An independently designed miniature system for automated water-level monitoring and control.</p>
+          <ul><li>Built using Arduino Uno and electronic components.</li><li>Integrated sensors, a water pump, a solenoid valve, and an LCD.</li></ul>
+        </div>
+      </article>
+
+      <article class="card project">
+        <div class="projectvisual"><div class="project-carousel">
+          <img class="project-slide active" src="images/sugarcane-vending-1.jpg" alt="Sugarcane juice vending project, photo 1" loading="lazy" decoding="async">
+          <img class="project-slide" src="images/sugarcane-vending-2.jpg" alt="Sugarcane juice vending project, photo 2" loading="lazy" decoding="async">
+          <button class="carousel-btn prev" type="button" aria-label="Previous photo">‹</button>
+          <button class="carousel-btn next" type="button" aria-label="Next photo">›</button>
+          <div class="carousel-dots"></div>
+        </div></div>
+        <div class="projectbody">
+          <h3>IoT-Based Vending System for Automated Sugarcane Juice Retailing</h3>
+          <div class="meta">STI College Rosario · SY 2026–2027 · Ongoing</div>
+          <p>Contributing to the development of an automated sugarcane juice vending system as part of a group thesis project.</p>
+          <ul><li>Involved in hardware and software integration.</li><li>Working with system automation and IoT applications.</li></ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <div class="wrap">
+    <div class="sectionhead">
+      <div><div class="eyebrow">04 / Proof of learning</div><h2>Certificates &amp; training</h2></div>
+      <p>Select “View certificate” to preview it in a popup on this page.</p>
+    </div>
+
+    <h3 class="groupheading">Technical training &amp; certifications</h3>
+    <div class="grid certgrid">
+      <div class="cert"><div><h4>AWS Academy Graduate – Engineering Operations Technicians</h4><p>AWS Academy · Training badge · 20 hours · November 12, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/aws-engineering-operations.pdf" target="_blank" rel="noopener">View certificate</a><a class="linkbtn ghost" href="https://www.credly.com/go/CqnFVtS0" target="_blank" rel="noopener">Verify ↗</a></div></div>
+      <div class="cert"><div><h4>Red Hat System Administration I</h4><p>RH124 – RHA, Version 10 · Certificate of attendance · 40 credit hours · September 24, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/red-hat-system-administration.pdf" target="_blank" rel="noopener">View certificate</a><a class="linkbtn ghost" href="https://www.credly.com/badges/9838926f-4267-45c4-815f-4c64af3adc47" target="_blank" rel="noopener">Verify ↗</a></div></div>
+      <div class="cert"><div><h4>Solid Edge Associate Level Certification</h4><p>Siemens Digital Industries Software · November 26, 2025 · ID 21034-176-421-0085</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/solid-edge-associate.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+    </div>
+
+    <h3 class="groupheading">Seminars &amp; webinars</h3>
+    <div class="grid certgrid">
+      <div class="cert"><div><h4>Future-Proof Your Career: New Skills. New Opportunities. Stay Ahead.</h4><p>MVConsultancy · 1 hour · November 4, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/future-proof-your-career.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+      <div class="cert"><div><h4>Digital Career Opportunities &amp; Freelancing: New Skills. Global Opportunities.</h4><p>MVConsultancy · 1 hour · October 18, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/digital-career-freelancing.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+      <div class="cert"><div><h4>Social Media Marketing That Works: Create. Engage. Convert.</h4><p>MVConsultancy · October 17, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/social-media-marketing.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+      <div class="cert"><div><h4>Protect Your Data</h4><p>DICT · Cyber Hygiene Fridays · 2 hours · October 16, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/protect-your-data.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+      <div class="cert"><div><h4>Data Analytics for Better Decisions: From Data to Insights to Action</h4><p>MVConsultancy · October 15, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/data-analytics.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+      <div class="cert"><div><h4>Cloud Tools for Productivity: Work Smarter. Collaborate Anywhere.</h4><p>MVConsultancy · 1 hour · October 14, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/cloud-tools-productivity.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+      <div class="cert"><div><h4>Artificial Intelligence for Everyone: Understand. Apply. Be Future-Ready.</h4><p>MVConsultancy · 1 hour · October 13, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/artificial-intelligence-for-everyone.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+      <div class="cert"><div><h4>Cyber Hygiene 101</h4><p>DICT · Cyber Hygiene Fridays · 2 hours · October 2, 2026</p></div><div class="certactions"><a class="linkbtn certificate-link" href="certificates/cyber-hygiene-101.pdf" target="_blank" rel="noopener">View certificate</a></div></div>
+    </div>
+
+    <dialog class="certificate-dialog" id="certificateDialog" aria-labelledby="certificateTitle">
+      <div class="certificate-dialog-head">
+        <span id="certificateTitle">Certificate preview</span>
+        <div class="certificate-dialog-actions">
+          <a class="linkbtn ghost" id="certificateNewTab" href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
+          <button class="certificate-close" id="certificateClose" type="button">Close</button>
+        </div>
+      </div>
+      <iframe class="certificate-frame" id="certificateFrame" title="Certificate document" src="about:blank"></iframe>
+    </dialog>
+  </div>
+</section>
+
+<section id="creative">
+  <div class="wrap">
+    <div class="sectionhead">
+      <div><div class="eyebrow">05 / A creative side</div><h2>Video edits &amp; creative work</h2></div>
+      <p>Creative projects in video editing and visual storytelling alongside my engineering work.</p>
+    </div>
+    <div class="grid videogrid">
+      <article class="card video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/YEwSYTkRrfU?rel=0"
+            title="Sa Susunod na Habang Buhay"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+        <div class="video-info"><h3>Sa Susunod na Habang Buhay</h3><div class="meta">Philippine Popular Culture · Group project · Co-director · Editor</div><p>A video editing project created for our Philippine Popular Culture group project. I was responsible for editing the video, selecting and arranging footage, trimming clips, and combining the scenes into a cohesive final output. This project allowed me to demonstrate my creativity, attention to detail, and ability to produce engaging video content through effective editing.</p><a class="linkbtn ghost" href="https://youtu.be/YEwSYTkRrfU" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </article>
+      <article class="card video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/KqM0YmlAB5w?rel=0"
+            title="El Filibusterismo"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+        <div class="video-info"><h3>El Filibusterismo</h3><div class="meta">Life and Works of Jose Rizal · Group project · Editor</div><p>A short film adaptation of Jose Rizal's El Filibusterismo, created as a class project for Life and Works of Jose Rizal. I handled the post-production process, focusing on organizing the recorded scenes, refining the sequence of events, and ensuring smooth transitions between clips. My role helped bring our group's interpretation of the novel together into a complete video presentation.</p><a class="linkbtn ghost" href="https://youtu.be/KqM0YmlAB5w" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <div class="sectionhead">
+      <div><div class="eyebrow">06 / My journey</div><h2>Education &amp; activities</h2></div>
+      <p>My academic background and experiences beyond the classroom.</p>
+    </div>
+    <div class="grid timeline">
+      <div class="card">
+        <h3>Education</h3>
+        <div class="item"><div class="when">EXPECTED GRADUATION 2027</div><h4>Bachelor of Science in Computer Engineering</h4><p>STI College Rosario, Cavite</p></div>
+        <div class="item"><div class="when">SENIOR HIGH SCHOOL</div><h4>STEM Strand</h4><p>Saint Augustine School Tanza</p></div>
+      </div>
+      <div class="card">
+        <h3>Awards &amp; activities</h3>
+        <div class="item"><div class="when">SY 2024–2025</div><h4>Best in Software Design Project</h4><p>Smart Secure Motor Box with Fingerprint Lock and Alarm</p></div>
+        <div class="item"><div class="when">SY 2026–2027</div><h4>Tagisan ng Talino – Think Quest</h4><p>Local-Level Participant</p></div>
+        <div class="item"><div class="when">SY 2024–2025</div><h4>Tagisan ng Sining – Director’s Cut</h4><p>Participant</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contactbox">
+      <div>
+        <div class="eyebrow">07 / Let's connect</div>
+        <h2>Thank you for stopping by ✿</h2>
+        <p>Open to learning opportunities and entry-level technical or engineering-related roles.</p>
+      </div>
+      <div class="contactlinks">
+        <a href="mailto:liezlcaballero0@gmail.com">✉ &nbsp; liezlcaballero0@gmail.com</a>
+        <a href="tel:+639929658193">☎ &nbsp; +63 992 965 8193</a>
+        <a href="#home">↑ &nbsp; Back to the top</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footerinner">
+    <span>Made with curiosity &amp; a little sparkle ✿</span>
+    <span>© 2026 Liezl G. Caballero</span>
+  </div>
+</footer>
+
+<script>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Mobile menu */
+const btn=$('#menuBtn'),links=$('#navlinks');
+const setMenu=open=>{links.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open))};
+btn.addEventListener('click',()=>setMenu(!links.classList.contains('open')));
+$$('a',links).forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+
+/* Project photo carousels: dots are built from the photos that actually load */
+$$('.project-carousel').forEach(carousel=>{
+  const dotsWrap=$('.carousel-dots',carousel),prev=$('.prev',carousel),next=$('.next',carousel);
+  let current=0,startX=null;
+  const slides=()=>$$('.project-slide',carousel);
+  const buildDots=()=>{
+    dotsWrap.innerHTML='';
+    slides().forEach((_,k)=>{
+      const d=document.createElement('button');
+      d.type='button';d.className='carousel-dot';d.setAttribute('aria-label','Show photo '+(k+1));
+      d.addEventListener('click',()=>show(k));
+      dotsWrap.appendChild(d);
+    });
+  };
+  const show=i=>{
+    const s=slides();
+    if(!s.length){
+      const hint=document.createElement('div');
+      hint.className='uploadhint';
+      hint.innerHTML='<span class="symbol">✿</span>Project photos coming soon';
+      carousel.replaceWith(hint);
+      return;
+    }
+    current=(i+s.length)%s.length;
+    s.forEach((el,k)=>el.classList.toggle('active',k===current));
+    $$('.carousel-dot',carousel).forEach((d,k)=>d.classList.toggle('active',k===current));
+    carousel.classList.toggle('single',s.length<2);
+  };
+  buildDots();
+  slides().forEach(img=>{
+    const drop=()=>{img.remove();buildDots();show(Math.min(current,slides().length-1))};
+    img.addEventListener('error',drop);
+    if(img.complete&&img.naturalWidth===0)drop();
+  });
+  if(!carousel.isConnected)return;
+  show(0);
+  prev.addEventListener('click',()=>show(current-1));
+  next.addEventListener('click',()=>show(current+1));
+  carousel.addEventListener('keydown',e=>{
+    if(e.key==='ArrowLeft')show(current-1);
+    if(e.key==='ArrowRight')show(current+1);
+  });
+  carousel.addEventListener('touchstart',e=>{startX=e.touches[0].clientX},{passive:true});
+  carousel.addEventListener('touchend',e=>{
+    if(startX===null)return;
+    const dx=e.changedTouches[0].clientX-startX;
+    if(Math.abs(dx)>40)show(current+(dx<0?1:-1));
+    startX=null;
+  });
+});
+
+/* Certificate preview. If the browser can't show PDFs inline (most phones), the link opens the PDF in a new tab instead. */
+const dlg=$('#certificateDialog'),frame=$('#certificateFrame'),title=$('#certificateTitle'),newTab=$('#certificateNewTab');
+const canPreview=typeof dlg.showModal==='function'&&navigator.pdfViewerEnabled!==false;
+$$('.certificate-link').forEach(link=>link.addEventListener('click',e=>{
+  if(!canPreview)return;
+  e.preventDefault();
+  title.textContent=link.closest('.cert').querySelector('h4').textContent;
+  newTab.href=link.href;
+  frame.src=link.href+'#toolbar=0&navpanes=0&scrollbar=0';
+  dlg.showModal();
+}));
+$('#certificateClose').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('close',()=>{frame.src='about:blank'});
+
+/* Highlight the current section in the nav, and fade content in as it scrolls into view */
+if('IntersectionObserver' in window){
+  const spy=new IntersectionObserver(entries=>entries.forEach(en=>{
+    if(!en.isIntersecting)return;
+    $$('a',links).forEach(a=>a.removeAttribute('aria-current'));
+    const l=$('a[href="#'+en.target.id+'"]',links);
+    if(l)l.setAttribute('aria-current','true');
+  }),{rootMargin:'-45% 0px -50% 0px'});
+  $$('main section[id]').forEach(s=>spy.observe(s));
+
+  if(!reduce){
+    const io=new IntersectionObserver((entries,o)=>entries.forEach(en=>{
+      if(en.isIntersecting){en.target.classList.add('in');o.unobserve(en.target)}
+    }),{threshold:.1});
+    $$('.sectionhead,.card,.cert,.contactbox').forEach(el=>{el.classList.add('reveal');io.observe(el)});
+  }
+}
+})();
+</script>
+</body>
+</html>
