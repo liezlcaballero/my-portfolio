@@ -25,7 +25,6 @@ PROJECT STRUCTURE
 - style.css – Website styling
 - script.js – Website functionality
 - images/ – Profile pictures, project photos, and certificates
-- videos/ – Video project previews (if applicable)
 
 HOW TO VIEW THE WEBSITE
 
